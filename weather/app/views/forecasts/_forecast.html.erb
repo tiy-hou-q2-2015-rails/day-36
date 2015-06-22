@@ -1,0 +1,9 @@
+<h1>Forecast for <%= @location %></h1>
+
+<%= "Currently in #{@location} it is best described as #{@forecast["currently"]["summary"]} and #{@forecast["currently"]["temperature"]} degrees." %>
+
+<ul>
+<% @forecast["daily"]["data"].each do |day| %>
+  <li><%= "#{Time.at(day["time"]).strftime("%A, %b %d").ljust(20)}: #{day["summary"]} ... Max Temp will feel like: #{day["apparentTemperatureMax"]}" %></li>
+<% end %>
+</ul>
