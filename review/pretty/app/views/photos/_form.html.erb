@@ -1,0 +1,4 @@
+<%= simple_form_for @photo, remote: true do |f| %>
+  <%= f.input :url, label: "Your Photo URL", hint: "http://example.com/yolo.png" %>
+  <%= f.submit class: "btn btn-primary btn-lg" %>
+<% end %>

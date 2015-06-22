@@ -1,0 +1,23 @@
+<h1>Photos#index</h1>
+
+<div class="text-right">
+  <p><%= link_to "New Photo", new_photo_path, remote: true, class: "btn btn-default" %></p>
+</div>
+
+<div id="photos">
+  <%= render partial: 'photos' %>
+</div>
+
+
+<div class="modal fade" id="photoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

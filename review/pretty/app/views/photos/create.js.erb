@@ -1,0 +1,8 @@
+<% if @photo.errors.any? %>
+  $("#photoModal .modal-body").html("<%= j render partial: 'form' %>");
+<% else %>
+
+  $("#photoModal").modal("hide");
+  $("#photos").html("<%= j render partial: 'photos' %>");
+
+<% end %>
